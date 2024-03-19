@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<section id="landing">
+    <div id="landing">
+        <div id="landing-text">
+            <h1>ImageFX Inc.</h1>
+            <h3>
+                Transform Your Vision into Reality
+                <br><br>
+                We offer top-notch graphic design services for all your printing and vinyl needs.
+            </h3>
+        </div>
+        <div id="landing-slideshow">
+            <div class="slideshow fade">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Landing Image 1">
+            </div>
+            <div class="slideshow fade">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Landing Image 2">
+            </div>
+            <div class="slideshow fade">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Landing Image 3">
+            </div>
+            <div class="slideshow fade">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Landing Image 4">
+            </div>
+
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <div id="previews">
+                <div class="preview preview-one"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Preview 1"></div>
+                <div class="preview preview-two"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Preview 2"></div>
+                <div class="preview preview-two"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Preview 3"></div>
+                <div class="preview preview-two"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Preview 4"></div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <h2>Our Services</h2>
+        <div id="services-container">
+            <div id="service">
+                <h3>Graphic Design</h3>
+                <p>At ImageFX, we strive to fulfill all your graphic design needs, to translate your concepts into captivating visual representations that resonate with your audience and elevate your brand's presence.</p>
+            </div>
+            <div id="service">
+                <h3>Printing</h3>
+                <p>We bring your brand to life with a variety of promotional materials including signs, banners, stickers, and business cards, offering everything you need to enhance visibility and promote your business effectively.</p>
+            </div>
+            <div id="service">
+                <h3>Commercial Vehicle Wraps</h3>
+                <p>If your business has a vehicle, then you have the perfect opportunity to advertise everywhere you go. At ImageFX we don't just wrap the car in the brand; We transform it into a mobile billboard that leaves a lasting impression on your audience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="reviews">
+    <h1>What Our Clients Say</h1>
+    <div id="review-gallery">
+        <div id='review'>
+            <strong>Google Reviewer</strong>
+            <p>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+            </p>
+            <blockquote>
+                "Great company to work with. 
+                Creative and exceed expectations every time!"
+            </blockquote>
+        </div><div id='review'>
+            <strong>Google Reviewer</strong>
+            <p>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+            </p>
+            <blockquote>
+                "Great service, fantastic design and fast production.  
+                Don’t take a chance on web based printing."
+            </blockquote>
+        </div><div id='review'>
+            <strong>Google Reviewer</strong>
+            <p>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+            </p>
+            <blockquote>
+                "I recently needed a few blueprints printed when my printer was broken. 
+                They turned the project around very quickly and at a reasonable price. 
+                Print quality was as expected. I will definitely be using them again!"
+            </blockquote>
+        </div><div id='review'>
+            <strong>Google Reviewer</strong>
+            <p>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+            </p>
+            <blockquote>
+                "They are the best!  Fast, cheap, and beautiful product!  
+                We are just now replacing a sign we bought 5 years ago that has had lots of use. 
+                When he first told me the price, I actually thought I had heard him wrong.  
+                No one is better!!"
+            </blockquote>
+        </div>
+    </div>
+</section>
+<section id="about">
+    <div id="about-text">
+    <h1>About ImageFX Inc.</h1>
+        <div id="about-description">
+            <p>
+                ImageFX Inc. is a graphic design company that specializes in creating high-quality designs for all your printing and vinyl needs. 
+                We have been in business for over 20 years and have worked with a variety of clients, from small businesses to large corporations. 
+                Our streamlined process is dedicated to providing you with the best possible service and ensuring that your vision is brought to life. 
+                Whether you need a new logo, business cards, or a custom vinyl wrap for your vehicle, we have the skills and expertise to make it happen.
+            </p>
+            <h2>Our Vision</h2>
+            <p>
+                At ImageFX Inc., we envision a world where every business can effortlessly communicate its unique identity through visually stunning designs. 
+                Our goal is to empower businesses of all sizes to stand out in today's competitive landscape by delivering creative solutions that leave a lasting impression.
+            </p>
+            <h2>What Sets Us Apart</h2>
+            <ul>
+                <li><strong>Affordability:</strong> We offer high-quality design and printing services at competitive prices, ensuring that every business can access the tools they need to succeed.</li>
+                <li><strong>Customer Satisfaction:</strong> We are committed to providing exceptional customer service, ensuring that every client receives the personalized attention and support they deserve.</li>
+                <li><strong>Commitment to Excellence:</strong> We take pride in our commitment to excellence, ensuring that every design we create meets the highest standards of quality and craftsmanship.</li>
+            </ul>
+            <h2>Get In Touch</h2>
+            <p>
+                Ready to transform your vision into reality? Contact us today to discuss your next project.
+                Contact us today to learn more about our services and how we can take your ideas to new heights.
+            </p>
+        </div>
+        <div id="about-buttons">
+            <a href="{{ url_for('gallery') }}">
+                <button id="explore">Explore Our Work</button>
+            </a>
+            <a href="{{ url_for('contact') }}">
+                <button id="contact">Contact Us</button>
+            </a>
+        </div>
+    </div>
+    <div id="about-image">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="About Image">
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #0067ee;
+    --primary-light: #8eb4d6;
+    --secondary-color: #111;
+    --text-color: #ccc;
+    --background-color: #080808;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+}
+
+#nav-left {
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+}
+
+#nav-left img {
+    height: 75px;
+    margin-right: 40px;
+}
+
+#nav-right {
+    display: flex;
+    align-items: center;
+    margin: 20px 80px 20px 20px;
+}
+
+#nav-left ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+#nav-left ul li {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+#nav-left ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#nav-left ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+#nav-left ul li a:hover {
+    color: var(--primary-light);
+}
+
+#nav-left ul li a:hover::after {
+    width: 100%;
+}
+
+#nav-right button {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+#nav-right button:hover {
+    background-color: #0044aa;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-shrink: 0;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 80px;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+footer div h1 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+footer ul li {
+    margin-left: 20px;
+}
+
+footer ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+footer ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: var(--primary-light);
+}
+
+footer ul li a:hover::after {
+    width: 100%;
+
+}
+
+.hamburger {
+    display: none; /* Hide by default */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    color: var(--primary-color)
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger menu on small screens */
+        font-size: 50px;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    #nav-left {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 20px;
+        padding: 0 20px 20px 20px;
+        width: 100%;
+    }
+
+    #nav-left img {
+        width: 100%;
+        margin: 0;
+    }
+
+    #nav-left ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        max-height: 0;
+        overflow-y: hidden;
+        transition: max-height 0.2s ease-in-out;
+        text-align: center;
+    }
+    
+    #nav-left.active ul {
+        display: flex; /* Add this line */
+        max-height: 500px;
+    }
+
+    #nav-left ul li {
+        font-size: 18px;
+        margin-left: 0;
+    }
+
+    #nav-right button {
+        display:none;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div {
+        margin: 20px;
+    }
+
+    /* Rest of your styles */
+}
